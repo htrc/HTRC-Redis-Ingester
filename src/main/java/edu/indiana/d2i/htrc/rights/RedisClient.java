@@ -19,8 +19,8 @@ public class RedisClient {
 	private JedisPool jedisPool;
 	private int numHmsetsPerPipeline;
 	
-	public RedisClient(String redisHost) {
-		this.jedisPool = new JedisPool(new JedisPoolConfig(), redisHost);
+	public RedisClient(String redisHost, String redisPassword) {
+		this.jedisPool = new JedisPool(new JedisPoolConfig(), redisHost, 6379, 2000, redisPassword);
 		numHmsetsPerPipeline = Config.INSTANCE.getRedisNumHmsetsPerPipeline();
 	}
 	

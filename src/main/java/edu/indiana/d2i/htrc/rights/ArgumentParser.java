@@ -29,8 +29,18 @@ public class ArgumentParser {
                	.setShortFlag('f')
                	.setRequired(false)
                	.setHelp("Set the availability status of volumes in the given TSV file to false. The text file contains an HTRC volume id per line.");
+
+		Parameter redisHost = new FlaggedOption("redisHost")
+				.setShortFlag('h')
+				.setRequired(true)
+				.setHelp("Redis host server.");
+
+		Parameter redisPassword = new FlaggedOption("redisPassword")
+				.setShortFlag('p')
+				.setRequired(true)
+				.setHelp("Redis server password.");
  
-        return new Parameter[] {volAccessLevelsFile, availVolsFile, unavailVolsFile};
+        return new Parameter[] {volAccessLevelsFile, availVolsFile, unavailVolsFile, redisHost, redisPassword};
     }
 
     private static String getApplicationHelp() {
