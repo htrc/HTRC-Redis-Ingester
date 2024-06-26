@@ -56,4 +56,4 @@ redis-volume-id-key-suffix=:info
 
 ## Monitoring
 
-Logs are recorded in the file, htrc-redis-ingester.log and the file path is configured in ``src/main/resources/logback.xml``.
+Logs are recorded in the file, ```htrc-redis-ingester.log``` and the file path is configured in ``src/main/resources/logback.xml``.
